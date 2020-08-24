@@ -1,6 +1,7 @@
 # README
 
 User ->> Media ->> Notes?
+I may not need this backend anymore since I moved to realm, but we'll see
 
 
 This README would normally document whatever steps are necessary to get the
