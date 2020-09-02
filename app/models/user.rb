@@ -9,4 +9,7 @@ class User
   field :password_digest, type: String
   field :streak, type: Integer, default: 0
   field :daily_done, type: Mongoid::Boolean, default: false
+
+  has_many :media, dependent: :destroy
+
 end
