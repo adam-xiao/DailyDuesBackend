@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:update, :destroy]
+  before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
   def index
@@ -8,8 +8,14 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # def show
-  #   render json: @user
+  #   render json: user
   # end
+
+  def selfMedia
+    myMedia = Medium.all.filter{|media| media.user_id == decoded_token}
+    # ItinActiv = Activity.all.filter{ |activity| activity.itinerary_id == myItin.id }
+    render json: myMedia
+  end
 
   # POST /users
   def create
