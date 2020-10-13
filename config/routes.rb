@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # move off resources later
   resources :media
   resources :users
 
